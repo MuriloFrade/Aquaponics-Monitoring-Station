@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aquaponic Station</title>
+     <!--<link rel='stylesheet' href='/stylesheets/style.css' />-->
+     
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var SocketIO = io();
+    </script>
+  </head>
+  <body>
+    <h1>Aquaponic Station</h1>
+    <a href="http://aquaponicstation:3000" >Go to Grafana charts</a>
+    <div>
+        <h2>Arduinos connected: <span id="connected"><%= arduinos.length %></span></h2>        
+  
+         <% arduinos.forEach(function(arduino){ %>
+            <div id="arduinos">
+                <h3>id: <%= arduino.id %></h3>
+                <p>temperature: <%= arduino.temperature %> C</p>
+                <p>pH: <%= arduino.pH %></p>
+            </div> 
+         <% }) %>
+    </div>
+
+    <h2>Alerts:</h2>
+    <div id="alerts">
+        
+    </div>
+    
+  </body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/javascript/script.js"></script>
+</html>

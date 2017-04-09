@@ -1,0 +1,16 @@
+{
+  "name": "station",
+  "version": "0.0.1",
+  "description": "Station server for monitor aquaponics systems",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "nrf": "^0.8.3",
+    "socket.io": "^1.7.3"
+  }
+}
